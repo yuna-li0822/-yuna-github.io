@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM G.E.M.</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>STEM G.E.M.</h1>
+  <main class="content">
+    <p>Youth-led nonprofit based in SoCal with a goal to empower girls in Engineering/Medical fields through curiosity, perseverance, and open-mindedness.</p>
+    <div class="buttons">
+        <button class="button">Join us</button>
+        <button class="button">Donate!</button>
+    </div>
+  </main>
+  <footer>© 2024 My Website</footer>
+  <!-- Link to the JS file -->
+  <script src="../static/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM G.E.M.</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="nav-link" href="/templates/index.html">Home</a>
+            <a class="nav-link" href="/templates/about.html">About Us/timeline</a>
+        </nav>
+        <h1>STEM G.E.M.</h1>
+    </header> 
+    <main class="content">
+        <p>Youth-led nonprofit based in SoCal with a goal to empower girls in Engineering/Medical fields through curiosity, perseverance, and open-mindedness.</p>
+        <div class="buttons">
+            <button class="button">Join us!</button>
+            <button class="button">Donate!</button>
+        </div>
+      </main>
+    <footer>
+        <p>&copy; 2024 STEM G.E.M.</p>
+    </footer>
+    <script src="../static/script.js"></script>
+</body>
+</html>
+
+
+/* Ocean and waves */
+    .ocean {
+        position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(to top, #a3ccff, #c6a1f7);
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 198px;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x;
+            background-size: contain;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 7s ease-in-out infinite;
+            filter: hue-rotate(0deg) brightness(1.5); /* Bright cyan waves */
+        }
+
+        .wave:nth-child(2) {
+            bottom: -25px;
+            opacity: 0.5;
+            animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 5s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes swell {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- About Us Section -->
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <p>Welcome to the About Us page! Here, you'll find more information about STEM G.E.M. and our mission.</p>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 STEM G.E.M.</p>
+    </footer>
+    <script src="../static/script.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>STEM G.E.M.</h1>
+        <nav>
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+        </nav>
+    </header>
+    <main class="content">
+        <p>Youth-led nonprofit based in SoCal with a goal to empower girls in Engineering/Medical fields through curiosity, perseverance, and open-mindedness.</p>
+        <!-- Display the image -->
+        <img src="{{ url_for('static', filename='myimage.jpg') }}" alt="Description of the image">
+        <div class="buttons">
+            <button class="button">Join us</button>
+            <button class="button">Donate!</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 STEM G.E.M.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
